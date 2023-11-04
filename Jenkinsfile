@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    environment {
-      NODEJS_HOME = tool name: 'NodeJS', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
+     tools {
+        nodejs 'NodeJS'
     }
     stages {
       stage('Checkout') {
