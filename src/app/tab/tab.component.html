@@ -1,0 +1,14 @@
+<div [@tabInOut] class="tab d-flex flex-column" #tab>
+  <div (dblclick)="toggleMove()" class="blur-layer" *ngIf="showBlurLayer"></div>
+  <div
+    (dblclick)="toggleMove()"
+    class="tab-header d-flex justify-content-between p-2"
+  >
+    <div [id]="tabId" class="tab-title">{{ tabTitle }}</div>
+    <span (click)="closeTab($event)" class="cancel px-2 clickable"></span>
+  </div>
+  <div class="tab-body px-2">
+    <div [innerHTML]="tabContent"></div>
+    <!--<span class="position-fixed bottom-0 end-0 px-3 py-1 draggable">_></span>-->
+  </div>
+</div>

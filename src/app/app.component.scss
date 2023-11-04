@@ -1,0 +1,37 @@
+* {
+  cursor: var(--cursor-pointer);
+}
+
+.navbar-container {
+  background-color: var(--navbar-bg-color);
+}
+
+.title {
+  color: var(--text-color);
+  font-weight: bold;
+  font-size: 48px;
+}
+
+li {
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 10px;
+  list-style: none;
+  transition: transform 0.2s ease;
+}
+
+li:hover {
+  transform: scale(1.2);
+}
+
+.theme-switch {
+  width: 18px;
+  aspect-ratio: 1;
+  margin-top: 4.5px;
+  margin-bottom: 4.5px;
+  transition: transform 0.2s ease;
+}
+
+.theme-switch:hover {
+  transform: scale(1.2);
+}

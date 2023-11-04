@@ -1,1 +1,97 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  --text-color: #222;
+  --bkg-color: #fff;
+  --navbar-bg-color: rgb(248, 249, 250);
+  --tab-bg-color: #d3d3d3;
+  --tab-bg-color-hover: #999999;
+  --tab-body-bg-color: #f3f3f3;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --cursor-pointer: url(./assets/images/cursor_pointer.svg), auto;
+  --cursor-click: url(./assets/images/cursor_pointer.svg), auto;
+  --cursor-drag: url(./assets/images/cursor_pointer.svg), auto;
+  --drag-icon-src: url(./assets/images/drag_icon.svg);
+  --theme-img-src: url(./assets/images/theme_switch.svg);
+}
+
+[data-theme="dark"] {
+  --text-color: #eee;
+  --bkg-color: #252222;
+  --navbar-bg-color: rgb(20, 19, 19);
+  --btn-txt-color: rgb(46, 43, 43);
+  --tab-bg-color: #252525;
+  --tab-bg-color-hover: #4e4e4e;
+  --tab-body-bg-color: #353535;
+  --shadow-color: rgba(255, 255, 255, 0.3);
+  --cursor-pointer: url(./assets/images/cursor_pointer_dark.svg), auto;
+  --cursor-click: url(./assets/images/cursor_click_dark.svg), auto;
+  --cursor-drag: url(./assets/images/cursor_drag_dark.svg), auto;
+  --drag-icon-src: url(./assets/images/drag_icon_dark.svg);
+  --theme-img-src: url(./assets/images/theme_switch_dark.svg);
+}
+
+[data-theme="light"] {
+  --text-color: #222;
+  --bkg-color: #fff;
+  --navbar-bg-color: rgb(248, 249, 250);
+  --tab-bg-color: #d3d3d3;
+  --tab-bg-color-hover: #999999;
+  --tab-body-bg-color: #f3f3f3;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --cursor-pointer: url(./assets/images/cursor_pointer.svg), auto;
+  --cursor-click: url(./assets/images/cursor_pointer.svg), auto;
+  --cursor-drag: url(./assets/images/cursor_pointer.svg), auto;
+  --theme-img-src: url(./assets/images/theme_switch.svg);
+}
+
+::-moz-selection {
+  /* Code for Firefox */
+  color: var(--bkg-color);
+  background: var(--text-color);
+}
+
+::selection {
+  color: var(--bkg-color);
+  background: var(--text-color);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  padding: 1px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-color);
+  border-radius: 5px;
+}
+
+html,
+body {
+  cursor: var(--cursor-pointer);
+  background-color: var(--bkg-color);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+html {
+  height: 100%;
+  cursor: var(--cursor-pointer);
+  background-color: var(--bkg-color);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.container {
+  display: grid;
+  column-gap: 50px;
+}
+
+.custom-cursor {
+  cursor: var(--cursor-pointer);
+}
+
+.draggable {
+  cursor: var(--cursor-drag);
+}
+
+.clickable {
+  cursor: var(--cursor-click);
+}
