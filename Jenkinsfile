@@ -1,8 +1,5 @@
 pipeline {
     agent any
-     tools {
-        nodejs 'NodeJS'
-    }
     environment {
       NODEJS_HOME = tool name: 'NodeJS', type: 'jenkins.plugins.nodejs.tools.NodeJSInstallation'
     }
