@@ -9,7 +9,7 @@ pipeline {
       stage('Install Dependencies') {
         steps {
           sh "curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -"
-          sh "sudo apt-get install -y nodejs"
+          sh "apt-get install -y nodejs"
           sh "npm install"
         }
       }
@@ -25,8 +25,7 @@ pipeline {
       }
       stage('Deploy') {
         steps {
-          sh "cp -r dist/* /var/www/portfolio/"
-          sh "sudo service nginx reload"
+          sh "echo Test"
         }
       }
     }
