@@ -4,7 +4,8 @@ import { ThemeService } from './services/theme.service';
 import { tabAnimation } from './tab/tab-animations';
 
 import { MarkdownService } from './services/markdown.service';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { SafeHtml } from '@angular/platform-browser';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -33,8 +34,13 @@ export class AppComponent {
   constructor(
     private modalService: NgbModal,
     private themeService: ThemeService,
-    private markdownService: MarkdownService
+    private markdownService: MarkdownService,
+    private translate: TranslateService
   ) {
+    translate.addLangs(['en', 'de']);
+    translate.setDefaultLang('en');
+    translate.use('en');
+
     const currentTheme =
       window.matchMedia &&
       window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -79,6 +85,10 @@ export class AppComponent {
     this.currentImageSrc = this.imageSrcs.get(
       this.themeService.getCurrentTheme()
     );
+  }
+
+  public switchLanguage(language: string): void {
+    this.translate.use(language);
   }
 
   @HostListener('document:keypress', ['$event'])

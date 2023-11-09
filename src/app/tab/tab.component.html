@@ -4,7 +4,7 @@
     (dblclick)="toggleMove()"
     class="tab-header d-flex justify-content-between p-2"
   >
-    <div [id]="tabId" class="tab-title">{{ tabTitle }}</div>
+    <div [id]="tabId" class="tab-title">{{ tabTitle | translate }}</div>
     <span (click)="closeTab($event)" class="cancel px-2 clickable"></span>
   </div>
   <div class="tab-body px-2">

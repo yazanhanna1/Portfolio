@@ -1,0 +1,10 @@
+{
+  "navbar": {
+    "about": "Über mich",
+    "projects": "Projekte",
+    "contact": "Kontakt"
+  },
+  "tab": {
+    "aboutTitle": "Über mich"
+  }
+}

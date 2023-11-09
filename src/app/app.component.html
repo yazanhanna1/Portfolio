@@ -5,9 +5,19 @@
   <ul
     class="d-flex flex-row justify-content-between align-items-center flex-wrap w-25 my-2"
   >
-    <li id="about" class="clickable" (click)="openTab($event)">About</li>
-    <li id="projects" class="clickable" (click)="openTab($event)">Projects</li>
-    <li id="contact" class="clickable" (click)="openTab($event)">Contact</li>
+    <li id="about" class="clickable" (click)="openTab($event)">
+      {{ "navbar.about" | translate }}
+    </li>
+    <li id="projects" class="clickable" (click)="openTab($event)">
+      {{ "navbar.projects" | translate }}
+    </li>
+    <li id="contact" class="clickable" (click)="openTab($event)">
+      {{ "navbar.contact" | translate }}
+    </li>
+    <div class="languages d-flex flex-row">
+      <li (click)="switchLanguage('en')">EN</li>
+      <li (click)="switchLanguage('de')">DE</li>
+    </div>
     <img
       class="theme-switch clickable"
       [src]="currentImageSrc"
@@ -22,7 +32,7 @@
     <app-tab
       *ngIf="listOfTabs.get('about') === true"
       [tabId]="'about'"
-      [tabTitle]="'About me'"
+      [tabTitle]="'tab.aboutTitle'"
       [tabContent]="getTabContent('about')"
       (tabClosed)="closeTab($event)"
     >
